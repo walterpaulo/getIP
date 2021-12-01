@@ -27,6 +27,6 @@ public class IPService {
         restTemplate = restTemplateBuilder.build();
         return restTemplate;
     }
-    
+
 
 }
