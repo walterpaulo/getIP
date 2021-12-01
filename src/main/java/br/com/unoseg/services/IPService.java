@@ -27,10 +27,6 @@ public class IPService {
         restTemplate = restTemplateBuilder.build();
         return restTemplate;
     }
-
-    public static void main(String[] args) {
-        IPService ipService = new IPService();
-        System.out.println(ipService.get().getCity());
-    }
+    
 
 }
