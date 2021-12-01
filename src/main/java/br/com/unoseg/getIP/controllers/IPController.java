@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping("")
 public class IPController {
@@ -16,6 +18,7 @@ public class IPController {
 
     @GetMapping("/")
     public ModelAndView index() {
-        return new ModelAndView(PAGINA_IP);
+        System.out.println(ipService.get().getCity());
+        return new ModelAndView(PAGINA_IP,"IPService", ipService.get());
     }
 }
