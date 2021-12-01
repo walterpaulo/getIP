@@ -1,3 +1,5 @@
+package br.com.unoseg.models;
+
 public class IPModel {
     private String status;
     private String country;
