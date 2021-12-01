@@ -1,6 +1,6 @@
-package br.com.unoseg.services;
+package br.com.unoseg.getIP.services;
 
-import br.com.unoseg.models.IPModel;
+import br.com.unoseg.getIP.models.IPModel;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

@@ -1,4 +1,4 @@
-package br.com.unoseg.models;
+package br.com.unoseg.getIP.models;
 
 public class IPModel {
     private String status;
