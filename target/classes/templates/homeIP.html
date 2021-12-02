@@ -7,14 +7,36 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Home IP</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" th:href="@{/css/materialize.min.css}" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/css/style.css}" media="screen,projection"/>
+
+    <title>IP</title>
 
 </head>
 <body>
+<div class="container">
+<div class="row">
+<h3>IP</h3>
+<div class="row">
+<form class="col s12">
+    <div class="row">
+        <div class="input-field col s4">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Digite o IP</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s6" style="margin-top: 10;">
+            <a class="waves-effect waves-light btn-small s6">CONSULTAR</a>
+        </div>
+    </div>
 
+</form>
+</div>
 <p th:text="${IPService.getCity}"/>
-<p th:text="${IPService.getRegion}"/>
-<p th:text="${IPService.getQuery}"/>
 
+<script type="text/javascript" th:src="@{/js/materialize.min.js}"></script>
+</div>
 </body>
 </html>
