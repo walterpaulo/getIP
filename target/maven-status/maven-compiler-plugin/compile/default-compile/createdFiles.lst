@@ -1,1 +1,4 @@
+br/com/unoseg/getIP/services/IPService.class
 br/com/unoseg/getIP/GetIpApplication.class
+br/com/unoseg/getIP/controllers/IPController.class
+br/com/unoseg/getIP/models/IPModel.class
