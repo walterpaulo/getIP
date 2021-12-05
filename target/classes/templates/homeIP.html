@@ -28,14 +28,18 @@
          </div>
         <div class="formIP">
 
-            <form action="#" class="">
+            <form action="/" method="POST">
                 <label>Informe IP</label>
-                <input type="text" id="ip">
-                <input type="button" onclick="getIP()" value="CONSULTAR">
+                <input type="text" name="ip" th:field="${ip}" />
+                <button type="submit">CONSULTAR</button>
             </form>
         </div>
         <div id="map"></div>
      </div>
+     <script>
+         const cidade =
+     </script>
+     <p th:text="${IPService.getCity}" >Incorrect date</p>
       
     
 <script th:src="@{js/script.js}"></script>

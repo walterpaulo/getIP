@@ -19,10 +19,12 @@ function getIP(){
         ip: '',
         getCity: 'Goiânia'
     }
-
     const valorIP = document.getElementById("ip").value;
     console.log(valorIP + ipdados.ip);
     console.log(getIPD);
 }
+const IP = new Request(IPService);
+alert(IP);
+console.log(IP);
 
 
