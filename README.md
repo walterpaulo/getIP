@@ -1,5 +1,5 @@
 # Projeto getIP
-Consulta informações do IP público. Além disso localiza no mapa.
+Consulta informações do IP público. Além disso, localiza no mapa a região.
 
 
 ### 1 TECNOLOGIAS
