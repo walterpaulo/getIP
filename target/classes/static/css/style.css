@@ -5,12 +5,27 @@
 body{
     height: 100vh;
 }
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 3.2rem;
+    font-size: 3.2rem;
+}
+.cabecalho{
+    line-height: 110%;
+    margin: 0.3rem 0 -0.32rem 0;
+    align-content: center;
+}
+
+label{
+    font-size: 1.3rem;
+}
 
 .cantainer{
 }
 .header{
     height: 50px;
-    
 }
+.label-ip{
 
+}
 #map{ height: 350px; }
