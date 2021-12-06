@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
+    <link rel="stylesheet" type="text/css" th:href="@{css/materialize.css}">
     <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -22,56 +23,56 @@
 </head>
 <body>
 
-     <div class="container">
-         <div class="header">
+<div class="container">
+    <div class="formIP">
+        <form action="/" th:method="POST">
+            <div class="row">
+                    <label>Informe IP</label>
+            </div>
+            <div class="row">
+                <div class="col s6">
+                    <input type="text" name="ip" th:text="*{ip}" />
+                </div>
+                <div class="col s6">
+                    <button class="btn waves-effect waves-teal" type="submit">Consultar</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
-         </div>
-        <div class="formIP">
-
-            <form action="/" th:method="POST">
-                <label>Informe IP</label>
-                <!--/*@thymesVar id="ip" type=""*/-->
-                <input type="text" name="ip" th:text="*{ip}" />
-                <button type="submit">Consultar</button>
-            </form>
-        </div>
-        <div id="map"></div>
-     </div>
-     <script>
-     </script>
-     <div class="legenda">
-     <p>Legenda</p>
-     <table border="1">
-         <tr>
-             <td>País</td>
-             <td th:text="${IPService.getCountry}" id="pais">BR</td>
-         </tr>
-         <tr>
-             <td>Estado</td>
-             <td th:text="${IPService.getRegion}" id="estado">GO</td>
-         </tr>
-         <tr>
-             <td>Cidade</td>
-             <td th:text="${IPService.getRegionName}" id="cidade">Goiânia</td>
-         </tr>
-         <tr>
-             <td>Lat</td>
-             <td th:text="${IPService.getLat}" id="lat">-16.7253029</td>
-         </tr>
-         <tr>
-             <td>Long</td>
-             <td th:text="${IPService.getLon}" id="long">-49.2559535</td>
-         </tr>
-         <tr>
-             <td>IP</td>
-             <td th:text="${IPService.getQuery}" id="ip"></td>
-         </tr>
-     </table>
-     </div>
-
+    <div id="map"/>
+    <div class="legenda">
+        <p>Legenda</p>
+        <table class="highlight" >
+            <tr>
+                 <td>País</td>
+                 <td th:text="${IPService.getCountry}" id="pais">BR</td>
+            </tr>
+             <tr>
+                 <td>Estado</td>
+                 <td th:text="${IPService.getRegion}" id="estado">GO</td>
+             </tr>
+             <tr>
+                 <td>Cidade</td>
+                 <td th:text="${IPService.getRegionName}" id="cidade">Goiânia</td>
+             </tr>
+             <tr>
+                 <td>Lat</td>
+                 <td th:text="${IPService.getLat}" id="lat">-16.7253029</td>
+             </tr>
+             <tr>
+                 <td>Long</td>
+                 <td th:text="${IPService.getLon}" id="long">-49.2559535</td>
+             </tr>
+             <tr>
+                 <td>IP</td>
+                 <td th:text="${IPService.getQuery}" id="ip"></td>
+             </tr>
+        </table>
+    </div>
+</div>
  <script>
  window.onload = () => {
-
      const dados = {
          long1: document.getElementById("long").textContent,
          lat1: document.getElementById("lat").textContent,
@@ -80,12 +81,11 @@
          pais1: document.getElementById("pais").textContent,
          ip1: document.getElementById("ip").textContent,
      }
-
-getIP(dados);
+ getIP(dados);
  console.log(dados);
  }
-
  </script>
+<script th:src="@{js/materialize.js}"></script>
 <script th:src="@{js/script.js}"></script>
 </body>
 </html>

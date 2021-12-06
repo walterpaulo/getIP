@@ -1,4 +1,4 @@
-/home/walter/Documentos/Projetos/getIP/src/main/java/br/com/unoseg/getIP/services/IPService.java
-/home/walter/Documentos/Projetos/getIP/src/main/java/br/com/unoseg/getIP/models/IPModel.java
-/home/walter/Documentos/Projetos/getIP/src/main/java/br/com/unoseg/getIP/GetIpApplication.java
-/home/walter/Documentos/Projetos/getIP/src/main/java/br/com/unoseg/getIP/controllers/IPController.java
+/tmp/getIP/src/main/java/br/com/unoseg/getIP/services/IPService.java
+/tmp/getIP/src/main/java/br/com/unoseg/getIP/GetIpApplication.java
+/tmp/getIP/src/main/java/br/com/unoseg/getIP/controllers/IPController.java
+/tmp/getIP/src/main/java/br/com/unoseg/getIP/models/IPModel.java
