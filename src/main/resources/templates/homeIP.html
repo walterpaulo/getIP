@@ -39,9 +39,42 @@
      </div>
      <script>
      </script>
-     <p th:text="${IPService.getCity}" >Incorrect date</p>
-      
-    
+     <div class="legenda">
+     <p>Legenda</p>
+     <table border="1">
+         <tr>
+             <td>País</td>
+             <td th:text="${IPService.getCountry}">BR</td>
+         </tr>
+         <tr>
+             <td>Estado</td>
+             <td th:text="${IPService.getRegion}">GO</td>
+         </tr>
+         <tr>
+             <td>Cidade</td>
+             <td th:text="${IPService.getRegionName}">Goiânia</td>
+         </tr>
+         <tr>
+             <td>Lat</td>
+             <td th:text="${IPService.getLat}">-16.7253029</td>
+         </tr>
+         <tr>
+             <td>Long</td>
+             <td th:text="${IPService.getLon}">-49.2559535</td>
+         </tr>
+         <tr>
+             <td>IP</td>
+             <td th:text="${IPService.getQuery}"></td>
+         </tr>
+     </table>
+     </div>
+
+ <script>
+ window.onload = () => {
+ console.log('ok');
+ }
+
+ </script>
 <script th:src="@{js/script.js}"></script>
 </body>
 </html>
