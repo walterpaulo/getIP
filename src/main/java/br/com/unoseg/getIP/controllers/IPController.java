@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class IPController {
     private final String PAGINA_IP = "homeIP";
     @Autowired
@@ -22,8 +22,8 @@ public class IPController {
         System.out.println(ipService.get().getCity());
         return new ModelAndView(PAGINA_IP,"IPService", ipService.get());
     }
-    @PostMapping
-    public ModelAndView getIP(@ModelAttribute("ip") String ip) {
+     @PostMapping
+    public ModelAndView getIP(String ip) {
         IPModel obj = new IPModel();
         if(!isIP(ip)){
             obj.setStatus("fail");

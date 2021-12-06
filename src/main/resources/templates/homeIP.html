@@ -28,16 +28,16 @@
          </div>
         <div class="formIP">
 
-            <form action="/" method="POST">
+            <form action="/" th:method="POST">
                 <label>Informe IP</label>
-                <input type="text" name="ip" th:field="${ip}" />
-                <button type="submit">CONSULTAR</button>
+                <!--/*@thymesVar id="ip" type=""*/-->
+                <input type="text" name="ip" th:text="*{ip}" />
+                <button type="submit">Consultar</button>
             </form>
         </div>
         <div id="map"></div>
      </div>
      <script>
-         const cidade =
      </script>
      <p th:text="${IPService.getCity}" >Incorrect date</p>
       
