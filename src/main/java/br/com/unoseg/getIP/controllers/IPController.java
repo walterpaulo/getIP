@@ -35,7 +35,7 @@ public class IPController {
         }
     }
     private boolean isIP(String ip){
-        boolean objIP = Pattern.matches("[1-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}", ip);
+        boolean objIP = Pattern.matches("[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}", ip);
         return objIP;
     }
 }
