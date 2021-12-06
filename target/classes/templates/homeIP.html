@@ -39,38 +39,49 @@
      </div>
      <script>
      </script>
+     <div class="legenda">
      <p>Legenda</p>
      <table border="1">
          <tr>
              <td>País</td>
-             <td th:text="${IPService.getCountry}">BR</td>
+             <td th:text="${IPService.getCountry}" id="pais">BR</td>
          </tr>
          <tr>
              <td>Estado</td>
-             <td th:text="${IPService.getRegion}">GO</td>
+             <td th:text="${IPService.getRegion}" id="estado">GO</td>
          </tr>
          <tr>
              <td>Cidade</td>
-             <td th:text="${IPService.getRegionName}">Goiânia</td>
+             <td th:text="${IPService.getRegionName}" id="cidade">Goiânia</td>
          </tr>
          <tr>
              <td>Lat</td>
-             <td th:text="${IPService.getLat}">-16.7253029</td>
+             <td th:text="${IPService.getLat}" id="lat">-16.7253029</td>
          </tr>
          <tr>
              <td>Long</td>
-             <td th:text="${IPService.getLon}">-49.2559535</td>
+             <td th:text="${IPService.getLon}" id="long">-49.2559535</td>
          </tr>
          <tr>
              <td>IP</td>
-             <td th:text="${IPService.getQuery}"></td>
+             <td th:text="${IPService.getQuery}" id="ip"></td>
          </tr>
      </table>
-
+     </div>
 
  <script>
  window.onload = () => {
- console.log('ok');
+     const dados = {
+         long1: document.getElementById("long").textContent,
+         lat1: document.getElementById("lat").textContent,
+         cidade1: document.getElementById("cidade").textContent,
+         estado1: document.getElementById("estado").textContent,
+         pais1: document.getElementById("pais").textContent,
+         ip1: document.getElementById("ip").textContent,
+     }
+
+getIP(dados);
+ console.log(dados);
  }
 
  </script>
